@@ -26,3 +26,9 @@ Some cool and stunning CSS effect we can apply in our next project. Its pure css
 Shows the some cool glowing text effect and some animation we can apply on button or on some container.
 
 [Watch Video](https://www.youtube.com/watch?v=G8T7_8Akw_A)
+
+
+# Newspaper style with multicolumn css style - without Grid or Flex | IT Articles
+Learn new css property - `column-count` to create multi column layout without grid OR flex. Create newspaper type style.
+
+[Watch Video](https://www.youtube.com/watch?v=Jue3SwPadUU)
