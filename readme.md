@@ -32,3 +32,8 @@ Shows the some cool glowing text effect and some animation we can apply on butto
 Learn new css property - `column-count` to create multi column layout without grid OR flex. Create newspaper type style.
 
 [Watch Video](https://www.youtube.com/watch?v=Jue3SwPadUU)
+
+
+---
+
+# ![ITArticles](https://avatars0.githubusercontent.com/u/63590130?s=40 "IT Articles") Join us at [YouTube](https://tiny.cc/ITArticles)
