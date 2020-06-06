@@ -1,0 +1,323 @@
+html, body, div, span, ul, li, ol {
+    padding:0px;
+    margin:0px;
+}
+
+.container {
+    background-color: #333;
+    height:100vh;
+    width:100vw;
+    font-family: 'Arial Rounded MT';
+    color:white;
+    font-size: 20px;
+}
+
+.navbar{
+    bottom:30px;
+    position: fixed;
+    margin-left: 50%;
+    transform:translateX(-50%);
+    list-style: none;    
+}
+.navbar li{
+    margin:10px;
+    display:inline-block; 
+    overflow: hidden;
+    padding:10px 0px;
+    border:1px solid white;     
+}
+
+.navbar li a {
+    position: relative;
+    padding:10px 15px;    
+    border-right-width: 0px;
+    text-decoration: none;
+    color:white;
+    overflow:hidden;
+    z-index: 99;
+    transition:all 0.4s ease 0s;    
+}
+
+.navbar li a:last-child {    
+    border-right-width: 1px;    
+}
+
+
+.navbar li a:before {
+    height:20px;
+    width:20px;
+    border-radius:10px;
+    position: absolute;
+    background-color: rgb(197, 197, 197);
+    left:50%;
+    transform:translateX(-50%) scale(0.001);
+    display: inline-block;    
+    content: ' ';        
+    z-index: -99;
+    transition:all 0.4s ease 0s;
+}
+
+.navbar li a:hover{
+    color:black;
+    box-shadow: #555 0px 0px 5px 10px;
+}
+
+.navbar li a:hover:before {
+    border:1px solid white;
+    transform:scale(4);
+}
+
+.slide-container{
+    height:100vh;  
+    overflow: hidden;
+    transition: all 0.4s ease 0s;
+}
+
+.slide-container > .slide {
+    text-align: center;
+    display:inline-block;
+    height:100vh;
+    width:100vw;
+}
+
+.basic-text{
+    display: inline-block;
+    margin-top:50vh;
+    transform: translateY(-50%);
+    font-size: 300%;    
+    color:white;        
+    transition:all 0.5s;
+}
+.red-animation{
+    animation: RedAnimation 1.5s ease-in-out infinite alternate;
+}
+.red-animation:hover {
+    color:rgb(255, 17, 119);
+    animation-name: none;
+}
+
+.purple-animation{    
+    animation: PurpleAnimation 1.5s ease-in-out infinite alternate;
+}
+.purple-animation:hover {
+    color:rgb(255, 0, 222);
+    animation-name: none;
+}
+
+.card{
+    display: inline-block;
+    margin:10px 20px;
+    margin-top:50vh;    
+    transform:translateY(-50%);
+    height:50vh;
+    width:20vw;
+    color:black;
+    box-shadow: rgb(182, 255, 0, 0.5) 0px 0px 10px 10px;       
+    transition:all 0.5s;     
+    overflow: hidden;   
+}
+
+.card > .details{    
+    height:100%;
+    text-align: center;
+    vertical-align: center;
+    transition:all 0.8s;  
+}
+.card > .details .front,
+.card > .details .back {    
+    background-color:rgb(182, 255, 0);
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;  
+    width:101%;
+    padding:10px;
+    box-sizing: border-box;     
+}
+.card > .details > .front{
+    opacity: 1;
+}
+.card > .details > .back{
+    transform:rotateX(180deg);
+    opacity: 0;
+}
+.card:hover {
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white,
+                0 0 20px rgb(182, 255, 0), 0 0 35px rgb(182, 255, 0),
+                0 0 40px rgb(182, 255, 0), 0 0 50px rgb(182, 255, 0),
+                0 0 75px rgb(182, 255, 0);
+    transform:translateY(-50%);
+}
+.card:hover > .details{
+    transform:rotateX(180deg);  
+}
+
+.card:hover > .details > .front{    
+    opacity: 0;
+}
+
+.card:hover > .details > .back{    
+    opacity: 1;
+}
+
+
+
+
+@keyframes RedAnimation {
+    from {
+        text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white,
+                    0 0 40px rgb(255, 17, 119), 0 0 70px rgb(255, 17, 119),
+                    0 0 80px rgb(255, 17, 119), 0 0 100px rgb(255, 17, 119),
+                    0 0 150px rgb(255, 17, 119);
+    }
+    to {
+        text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white,
+                    0 0 20px rgb(255, 17, 119), 0 0 35px rgb(255, 17, 119),
+                    0 0 40px rgb(255, 17, 119), 0 0 50px rgb(255, 17, 119),
+                    0 0 75px rgb(255, 17, 119);
+    }
+}
+
+@keyframes PurpleAnimation {
+    from {
+        text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white,
+                    0 0 40px rgb(255, 0, 222), 0 0 70px rgb(255, 0, 222),
+                    0 0 80px rgb(255, 0, 222), 0 0 100px rgb(255, 0, 222),
+                    0 0 150px rgb(255, 0, 222);
+    }
+    to {
+        text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white,
+                    0 0 20px rgb(255, 0, 222), 0 0 35px rgb(255, 0, 222),
+                    0 0 40px rgb(255, 0, 222), 0 0 50px rgb(255, 0, 222),
+                    0 0 75px rgb(255, 0, 222);
+    }
+}
+
+.btn{
+    position: relative;
+    width:200px;
+    height:70px;
+    display: inline-block;
+    margin:10px 10px;
+    color:rgb(182, 255, 0);
+    cursor: pointer;
+    border:1px solid rgb(182, 255, 0);
+    transition:all 0.4s;
+    box-sizing: border-box; 
+    overflow: hidden;       
+}
+.btn:before, .btn:after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height:70px;
+    width:200px;
+    top:0px;
+    left:0px;    
+    opacity: 0;
+    background-color:rgb(182, 255, 0);
+    transition:all 1s;
+    z-index: -99;
+}
+
+.btn:hover {
+    background-color:transparent;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white,
+                0 0 20px rgb(182, 255, 0), 0 0 35px rgb(182, 255, 0),
+                0 0 40px rgb(182, 255, 0), 0 0 50px rgb(182, 255, 0),
+                0 0 75px rgb(182, 255, 0); 
+}
+
+.btn.effect1:hover:before,
+.btn.effect1:hover:after{
+    transform:rotate(-60deg) translateY(350px) translateX(180px);
+}
+.btn.effect1:before, .btn.effect1:after{
+    transform:rotate(-60deg) ;
+    height:40px;
+    left:-200px;
+    top:-30px;
+    opacity: 0.7;
+}
+.btn.effect1:after{    
+    left:-120px;
+}
+
+.btn.effect2:before{
+    opacity:0.7;
+    transition-duration: 0.7s;
+    transform:translateX(-200px) translateY(70px);
+}
+.btn.effect2:hover:before{    
+    transform:translateX(200px) translateY(-70px);
+}
+
+.btn.effect3:before{
+    transition-duration: 0.4s;
+    opacity:0.4;
+    height:70px;
+    width:70px;
+    left:-35px;
+    top:35px;
+    border-radius: 35px;
+    transform:scale(0);
+}
+
+.btn.effect3:hover:before{    
+    transform:scale(6);    
+}
+
+
+.btn.effect4:before,
+.btn.effect4:after{
+    opacity:0.4;
+    background-color: transparent;    
+    height:0px;
+    width:0px;
+    border-top:70px solid transparent;
+    border-right:200px solid transparent; 
+}
+
+.btn.effect4:before{    
+    transform:translateX(-200px) translateY(70px);   
+    border-top-color:rgb(182, 255, 0);
+}
+
+.btn.effect4:after{        
+    transform:translateX(200px) translateY(-70px);
+    border-right-color:rgb(182, 255, 0);
+}
+.btn.effect4:hover:before{    
+    transform:translateX(200px) translateY(-70px);
+}
+.btn.effect4:hover:after{    
+    transform:translateX(-200px) translateY(70px);
+}
+
+
+
+.btn.effect5:before,
+.btn.effect5:after{
+    opacity:0.4;
+    background-color: transparent;    
+    height:0px;
+    width:0px;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+}
+.btn.effect5:before{    
+    transform:translateX(-200px);   
+    border-left: 100px solid rgb(182, 255, 0);
+}
+
+.btn.effect5:after{        
+    transform:translateX(200px);
+    border-right: 100px solid rgb(182, 255, 0);
+}
+
+.btn.effect5:hover:before{    
+    transform:translateX(200px);
+}
+.btn.effect5:hover:after{        
+    transform:translateX(-200px);
+}

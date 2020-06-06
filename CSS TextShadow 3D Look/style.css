@@ -1,0 +1,23 @@
+.body{
+    background:#4e4e4e;
+    font-family: 'Arial Rounded MT';
+}
+
+.font-300{
+    font-size: 300%;
+}
+
+.font-500{
+    font-size: 500%;   
+}
+
+.my-style{
+    text-transform: uppercase;
+    color:#ed9820;
+    display:inline-block;
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+._3d-effect {    
+    text-shadow: #ccc 2px -3px 5px,  #333 -5px 3px 9px;
+}

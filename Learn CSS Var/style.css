@@ -1,0 +1,23 @@
+:root{
+    --primary-color:#da1313;
+    --primary-pv:15px;
+    --primary-ph:25px;
+}
+
+html, body, div, span {
+    padding:0px;
+    margin:0px;
+}
+
+.container {
+    background-color: #ddd;
+    color:var(--primary-color);
+    font-family: 'Arial Rounded MT';
+    padding:var(--primary-vp, 50px) var(--primary-ph);
+}
+
+.btn {
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;    
+    padding:var(--primary-pv) var(--primary-ph);
+}

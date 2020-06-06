@@ -1,0 +1,173 @@
+html, body, div, span, ul, li, ol {
+    margin:0px;
+    padding:0px;
+}
+.container{
+    font-family: 'Arial Rounded MT';
+    color:darkmagenta;
+}
+
+.navbar-container{
+    padding:20px;
+    text-align: center;
+    position: fixed;
+    width:100vw;
+}
+.navbar{
+    list-style: none;
+}
+.navbar li {
+    display: inline-block;
+}
+.navbar li a {
+    margin:0px 10px;
+    display: inline-block;    
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;    
+    height:40px;
+    width:40px;
+    border-radius: 20px;
+    background-color: #ddd;
+    z-index: 1;  
+    color:darkmagenta;  
+}
+
+.navbar li a:hover{
+    background-color: #8b008b;
+    color:white;
+    transform: scale(1.3);
+    box-shadow: #ccc 0px 0px 5px 10px, #aaa 0px 0px 5px 15px, rgba(139, 0, 139, 0.5) 0px 0px 10px 20px;
+    transition: all 0.4s ease 0s;  
+    z-index: 99999;  
+}
+
+.slide{
+    height:100vh;
+    width: 100vw;
+    background-color: #eee;   
+    text-align: center;    
+}
+
+.bg{    
+    margin-top:50vh;
+    transform:translateY(-50%);
+    display: inline-block;
+    position: relative;
+}
+
+.bg.animate > span {
+    font-size: 100px;        
+    opacity: 0.4;    
+    text-shadow: gray 4px 2px 5px;    
+}
+
+.bg.animate.fade-in > span {    
+    animation: fadeIn 2000ms infinite alternate-reverse linear backwards;    
+}
+
+.bg.animate.fade-in-with-color > span {
+    animation: fadeInColor 2000ms infinite alternate-reverse linear backwards;    
+}
+
+.bg.animate.write-erase > span{
+    opacity: 1;
+}
+.bg.animate.write-erase > .eraser {
+    position: absolute;
+    top:0px;
+    right:0px; 
+    height:110%;     
+    background-color: #eee;
+    box-shadow: #eee -30px 0px 30px -5px;
+    animation: writeErase 4s infinite alternate-reverse ease-in backwards;
+}
+
+.bg.animate.elastic-pull > span {
+    opacity: 1;
+    animation: elastic 2000ms infinite alternate-reverse linear backwards;    
+}
+
+.bg.animate.slide-in > span {
+    opacity: 0;
+    position: relative;
+    left:-20px;
+    animation: slideIn 2000ms infinite linear;
+}
+
+.bg.animate > span.s1{
+    animation-delay: 200ms;
+}
+
+.bg.animate > span.s2{
+    animation-delay: 400ms;
+}
+
+.bg.animate > span.s3{
+    animation-delay: 600ms;
+}
+
+.bg.animate > span.s4{
+    animation-delay: 800ms;
+}
+
+.bg.animate > span.s5{
+    animation-delay: 1000ms;
+}
+
+.bg.animate > span.s6{
+    animation-delay: 1200ms;
+}
+
+.bg.animate > span.s7{
+    animation-delay: 1400ms;
+}
+
+.bg.animate > span.s8{
+    animation-delay: 1600ms;
+}
+
+.bg.animate > span.s9{
+    animation-delay: 1800ms;
+}
+
+.bg.animate > span.s10{
+    animation-delay: 2000ms;
+}
+
+@keyframes fadeIn{
+    0% {opacity: 0.2;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeInColor{
+    0% {opacity: 0.4;color: darkmagenta;}    
+    100% {opacity: 1;color: orangered;}
+}
+
+@keyframes writeErase{
+    from {width:0px;}
+    to {width:100%;}
+}
+
+@keyframes elastic{
+    from {margin-left:20px;}
+    to {margin-left:0px;}
+}
+
+@keyframes slideIn{
+    0% {left:-20px;opacity: 0;}
+    5% {left:0px;opacity: 1;}
+    50% {left:0px;opacity: 1;}
+    550% {left:0px;opacity: 1;}
+    100% {left:-20px;opacity: 0;}
+}
+
+.img-slide{
+    filter:grayscale(1);
+    transition:all 0.4s ease 0s;
+}
+
+.img-slide:hover{
+    filter:none;
+}

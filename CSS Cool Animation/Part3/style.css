@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Fontastique';
+    src: url('./fontastique.ttf');
+};
+
+
+html, body, div, span, ul, li, ol {
+    margin: 0px;
+    padding: 0px;    
+    color:white;
+}
+
+.container {
+    background-color: #4d4d4d;   
+    text-align: center; 
+    font-family: 'Fontastique';    
+}
+
+.hexagon {       
+    border-color: transparent;
+    outline-color: transform;
+    overflow: hidden;    
+}
+
+.hexagon path.primary {    
+    fill: #ee9a20;     
+}
+
+.hexagon path.bg,
+.hexagon polygon.bg {    
+    fill: #3d3d3d;     
+}
+
+.logo{    
+    background-color: #4d4d4d;
+    color: #3d3d3d;
+    margin-left: -200px;
+    margin-top: 170px;
+    display: inline-block;
+    position: absolute;
+    border-color: #4d4d4d; 
+    outline-color:#4d4d4d;
+}
+
+.logo div {
+    z-index: 999;
+    position: absolute;        
+}
+
+.it{
+    font-size: 800%;        
+    top:12px;
+    left:150px;
+}
+
+.articles{    
+    font-size: 450%;
+    top: 135px;
+    left: 45px !important;
+}
